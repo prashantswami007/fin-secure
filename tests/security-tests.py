@@ -3,7 +3,7 @@ import requests
 import json
 
 # Configuration
-BASE_URL = "http://localhost:5000"
+BASE_URL = "https://fin-secure-server.onrender.com"
 RECOMMEND_ENDPOINT = f"{BASE_URL}/recommend"
 
 class TestComplianceBoundaryAnalysis:

@@ -13,7 +13,7 @@ app = Flask(__name__)
 if os.getenv('RENDER'):
     # In production, allow specific origins
     CORS(app, origins=[
-        "https://fin-secure-frontend.onrender.com",  # Update with your frontend URL
+        "https://fin-secure.onrender.com",  # Update with your frontend URL
         "http://localhost:5173"  # Keep for local development
     ])
 else:
