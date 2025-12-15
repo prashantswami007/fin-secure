@@ -17,7 +17,7 @@ import {
 import { useEffect, useState } from "react";
 
 const API_BASE_URL =
-  import.meta.env.API_BASE_URL || "http://localhost:5000";
+  import.meta.env.BASE_URL || "http://localhost:5000";
 
 const App = () => {
   const [activeTab, setActiveTab] = useState("client");

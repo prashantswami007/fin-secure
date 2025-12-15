@@ -184,15 +184,13 @@ def recommend():
 
 @app.route('/run-tests', methods=['GET'])
 def run_tests():
-      if os.getenv("RENDER"):
-        return jsonify({
-            "error": "Test execution disabled in production",
-            "message": "Use CI/CD or local environment to run tests"
-        }), 403
-    """
-    Execute pytest tests and return results
-    Query param: type=compliance or type=security
-    """
+    if os.getenv("RENDER"):
+      return jsonify({
+          "error": "Test execution disabled in production",
+          "message": "Use CI/CD or local environment to run tests"
+      }), 403
+    #Execute pytest tests and return results
+    #Query param: type=compliance or type=security
     test_type = request.args.get('type', 'compliance')
 
     try:
